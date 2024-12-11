@@ -1,0 +1,20 @@
+type Query {
+    getAllBooks : [Book]
+    getBookById(id : Int) : Book
+    getBookListByIdGreaterThan(id : Int) : [Book]
+    getBookListByIdLessThan(id : Int) : [Book]
+    getBookListByPageCountGreaterThan(pageCount : Int) : [Book]
+    getBookListByPageCountLessThan(pageCount : Int) : [Book]
+}
+
+type Book {
+    id : ID
+    name : String
+    pageCount : Int
+    author : Author
+}
+
+type Author {
+    id : ID
+    name : String
+}
